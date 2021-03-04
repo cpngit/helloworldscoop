@@ -1,0 +1,16 @@
+{
+    "version": "1.5",
+    "description": "Hello world package",
+    "architecture": {
+        "64bit": {
+            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\HelloWorldSetup_x64.msi",
+            "shortcuts": [
+                [
+                    "HelloWorldPackage.exe",
+                    "HelloWorldPackage"
+                ]
+            ]
+        }
+    },
+    "bin": "HelloWorldPackage.exe"
+}
