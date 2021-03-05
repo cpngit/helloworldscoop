@@ -3,7 +3,7 @@
     "description": "Bosch System Management - SysMgm Commander",
     "architecture": {
         "64bit": {
-            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\sysmgmcommander.zip",
+            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\sysmgmcommander1.2.zip",
             "shortcuts": [
                 [
                     "Installation.Commander.exe",

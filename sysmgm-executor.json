@@ -3,7 +3,7 @@
     "description": "Bosch System Management - SysMgm Executor",
     "architecture": {
         "64bit": {
-            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\sysmgmexecutor.zip",
+            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\sysmgmexecutor1.2.zip",
             "shortcuts": [
                 [
                     "Installation.Executor.exe",
