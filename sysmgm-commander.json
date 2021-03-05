@@ -1,0 +1,22 @@
+﻿{
+    "version": "1.2",
+    "description": "Bosch System Management - SysMgm Commander",
+    "architecture": {
+        "64bit": {
+            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\sysmgmcommander.zip",
+            "shortcuts": [
+                [
+                    "Installation.Commander.exe",
+                    "Installation.Commander"
+                ]
+            ]
+        }
+    },
+    "bin": [ "Installation.Commander.exe" ],	
+    "post_install": 
+		[ 
+		"if (Get-Service \"Bosch.SysMgm.Commander\" -ErrorAction SilentlyContinue) { sc.exe config Bosch.SysMgm.Commander binPath= \"$dir\\Installation.Commander.exe\" } ",
+		"if (Get-Service \"Bosch.SysMgm.Commander\" -ErrorAction SilentlyContinue) { Set-Service -Name Bosch.SysMgm.Commander -Status Running -PassThru } "
+		]
+}
+

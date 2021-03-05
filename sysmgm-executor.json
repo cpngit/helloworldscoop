@@ -1,0 +1,21 @@
+﻿{
+    "version": "1.2",
+    "description": "Bosch System Management - SysMgm Executor",
+    "architecture": {
+        "64bit": {
+            "url": "c:\\programdata\\Bosch\\SysMgmService\\packages\\sysmgmexecutor.zip",
+            "shortcuts": [
+                [
+                    "Installation.Executor.exe",
+                    "Installation.Executor"
+                ]
+            ]
+        }
+    },
+    "bin": [ "Installation.Executor.exe" ],
+    "post_install": 
+		[ 
+		"if (Get-Service \"Bosch.SysMgm.Executor\" -ErrorAction SilentlyContinue) { sc.exe config Bosch.SysMgm.Executor binPath= \"$dir\\Installation.Executor.exe\" } ",
+		"if (Get-Service \"Bosch.SysMgm.Executor\" -ErrorAction SilentlyContinue) { Set-Service -Name Bosch.SysMgm.Executor -Status Running -PassThru } "		
+		]
+}
